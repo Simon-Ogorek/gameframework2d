@@ -25,18 +25,24 @@ typedef struct Entity_S
 
     char* name;
 
+    GFC_Vector2D image_size;
+    GFC_Vector2D working_size;
+
+    float animation_frame;
+    float animation_speed;
 }Entity;
 
-void gf2d_entity_init(int count);
+void gf2d_entity_init(int count, char* config_filepath);
 
 Entity * gf2d_create_entity(char *name);
 
 void gf2d_delete_entity(Entity *ent);
-void gf2d_draw_all();
 
-void gf2d_draw_entity(Entity *ent);
+void gf2d_think_all();
+void gf2d_update_all();
+void gf2d_draw_all();
 
 void gf2d_entity_manager_slog();
 
-
+void gf2d_get_entity(char * name);
 #endif

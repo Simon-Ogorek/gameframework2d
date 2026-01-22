@@ -1,0 +1,30 @@
+{
+    "sprites": 
+    [
+        {
+            "name": "ball",
+            "filepath" : "sprites/ball.png",
+
+            "sheet_width" : 6,
+            "sheet_height" : 1,
+
+            "animation_speed" : 0,
+
+            "surface" : "Foreground"
+        },
+        {
+            "name": "cube",
+            "filepath" : "sprites/cube.jpg",
+
+            "sheet_width" : 5,
+            "sheet_height" : 6,
+            "animation_speed" : 0.2
+        }
+    ],
+
+    "surfaces": [
+        "Undefined",
+        "Background",
+        "Foreground"
+    ]
+}
