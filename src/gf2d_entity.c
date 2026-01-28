@@ -66,6 +66,7 @@ void gf2d_preload_sprites(char* config_filepath)
             temp->h / frameHeight,
             frameWidth,
             false);
+        SDL_FreeSurface(temp);
 
 
 

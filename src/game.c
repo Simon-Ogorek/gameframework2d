@@ -4,6 +4,7 @@
 #include "gf2d_graphics.h"
 #include "gf2d_sprite.h"
 #include "gf2d_entity.h"
+#include "gf2d_map.h"
 
 int main(int argc, char * argv[])
 {
@@ -34,14 +35,10 @@ int main(int argc, char * argv[])
     
     /* New Stuff */
     gf2d_entity_init(64, "sprites/sprite.json");
+    gf2d_map_init("map/maptiles.json");
 
     
     float cubeTimer = 0;
-    
-    
-    
-
-    
     
     /*demo setup*/
     sprite = gf2d_sprite_load_image("images/backgrounds/bg_flat.png");
@@ -70,7 +67,7 @@ int main(int argc, char * argv[])
         gf2d_graphics_clear_screen();// clears drawing buffers
         // all drawing should happen betweem clear_screen and next_frame
             //backgrounds drawn first
-            gf2d_sprite_draw_image(sprite,gfc_vector2d(0,0));
+            //gf2d_sprite_draw_image(sprite,gfc_vector2d(0,0));
             
             //UI elements last
             /*gf2d_sprite_draw(
@@ -93,9 +90,14 @@ int main(int argc, char * argv[])
                 &mouseGFC_Color,
                 (int)mf);
 
+            gf2d_map_draw();
+            /*
             gf2d_think_all();
             gf2d_update_all();
             gf2d_draw_all();
+            */
+
+            
 
         gf2d_graphics_next_frame();// render current draw frame and skip to the next frame
         

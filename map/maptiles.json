@@ -1,0 +1,40 @@
+{
+    "sizeInPixels": 32,
+    "tilesets":
+    [
+        {        
+            "name":"basic",
+            "filepath":"map/BasicTileset.png",
+
+            "sheet_height":5,
+            "sheet_width":7,
+
+            "tiles":
+            [
+                {
+                    "name":"grass",
+                    "x":2,
+                    "y":1
+                },
+
+                {
+                    "name":"water",
+                    "x":1,
+                    "y":1
+                },
+                {
+                    "name":"selection",
+                    "x":1,
+                    "y":0
+                }
+            ]   
+        }
+    ],
+
+    "map_layout":
+    [
+        { "tile":"grass", "x":0, "y":2, "z":0 },
+        { "tile":"water", "x":1, "y":2, "z":0 },
+        { "tile":"water", "x":0, "y":1, "z":0 }
+    ]
+}
